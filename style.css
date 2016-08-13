@@ -1,0 +1,115 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    color: #222;
+    background: #fff;
+}
+#triangle {
+    margin: 0 auto;
+    position: relative;
+    width: 100vmin;
+    height: 100vmin;
+}
+
+.circle {
+    contain: strict;
+    position: absolute;
+    background: currentColor;
+    width: 4vmin;
+    height: 4vmin;
+    margin: -2vmin;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: transform .25s ease;
+    transform: scale(.3);
+}
+
+button {
+    display: inline-block;
+    margin: .2em;
+    padding: .5em;
+    width: 3em;
+    height: 3em;
+    background: none;
+    border: 1px solid currentColor;
+    color: inherit;
+    border-radius: 5px;
+}
+
+.play {
+    text-align: center;
+    position: relative;
+}
+.play:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 1.5em solid currentColor;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+}
+
+.pause {
+    text-align: center;
+    position: relative;
+}
+.pause:before,
+.pause:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: .85em;
+    height: 2em;
+    background: currentColor;
+
+}
+.pause:after {
+    left: 75%;
+}
+
+.replay {
+    text-align: center;
+    position: relative;
+}
+.replay:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2em;
+    height: 2em;
+    background: none;
+    border: .4em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+}
+.replay:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 100%;
+    transform: translate(-150%, -110%);
+    width: 0;
+    height: 0;
+    background: none;
+    border: .5em solid transparent;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+
+}

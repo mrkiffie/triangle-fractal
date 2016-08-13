@@ -2,29 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Triangle Fractal</title>
-
-    <style>
-        html,
-        body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-        }
-        #triangle {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="triangle">
-        Ummm. Your browser doesn't support canvas :(
-    </canvas>
+    <button id="replay" class="replay" title="Replay"></button>
+    <button id="toggle" class="play" title="Play|Pause"></button>
+
+    <label for="speed">
+    &#x1f422;
+    <input id="speed" type="range" min="0" max="7" step="1" value="4" />
+    &#x1f407;
+    </label>
+    <div id="triangle"></div>
 
     <script src="app.js"></script>
-
 </body>
 </html>
